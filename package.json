@@ -1,10 +1,11 @@
 {
-  "name": "@victorseara.me/use-ts",
+  "name": "@vsps/use-ts",
   "version": "0.0.1",
   "license": "MIT",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": false,
   "files": [
     "dist"
   ],
