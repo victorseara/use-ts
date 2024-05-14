@@ -10,18 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 21
+      
       - uses: pnpm/action-setup@v4
         with:
           version: 8
+      
       - run: pnpm install
-      - name: Create Release Pull Request and publish to npm
+      
+      - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
-        with:
-          publish: pnpm release
+      
+      - name: Publish
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: pnpm publish
+        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
