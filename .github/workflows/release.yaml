@@ -1,8 +1,10 @@
 name: Release
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Continuous Integration"]
+    branches: [main]
+    types: 
+      - completed
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
@@ -19,7 +21,7 @@ jobs:
         with:
           version: 8
       
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
       
       - name: Create Release Pull Request
         id: changesets
