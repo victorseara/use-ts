@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "<org>/<repo>"
+      "repo": "victorseara/use-ts"
     }
   ],
   "commit": false,
