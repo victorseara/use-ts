@@ -1,5 +1,5 @@
 {
-  "name": "<library_name>",
+  "name": "@victorseara.me/use-ts",
   "version": "0.0.0",
   "license": "MIT",
   "description": "",
@@ -15,13 +15,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+<repo_url>.git"
+    "url": "git+https://github.com/victorseara/use-ts.git"
   },
-  "bugs": {
-    "email": "<author_email>"
+  "homepage": "https://github.com/victorseara/use-ts",
+  "author": {
+    "name": "Victor Seara",
+    "url": "https://github.com/victorseara"
   },
-  "homepage": "<homepage_url>",
-  "author": "<author_name> <author_email>",
   "keywords": [],
   "exports": {
     ".": {
